@@ -23,6 +23,7 @@ def get_amount():
         amount = float(input("Enter the amount: "))
         if amount <= 0:
             raise ValueError("Amount must be a non-negative non-zero value.")
+        return amount
     except ValueError as e:
         print(e)
         return get_amount()
@@ -30,7 +31,7 @@ def get_amount():
 def get_category():
     category = input("Enter the category ('I' for Income or 'E' for Expense): ").upper()
     if category in CATEGORIES:
-        return CATEGORIES(category)
+        return CATEGORIES[category]
     
     print("Invalid category. Please enter 'I' for Income or 'E' for Expense.")
     return get_category()
