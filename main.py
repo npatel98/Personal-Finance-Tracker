@@ -74,13 +74,13 @@ def main():
         print("3. Exit")
         choice = input("Enter your choice (1-3): ")
 
-        if choice == 1:
+        if choice == "1":
             add()
-        elif choice == 2:
+        elif choice == "2":
             start_date = get_date("Enter the start date (dd-mm-yyyy): ")
             end_date = get_date("Enter the end date (dd-mm-yyyy): ")
             df = CSV.get_transaction(start_date, end_date)
-        elif choice == 3:
+        elif choice == "3":
             print("Exiting...")
             break
         else:
