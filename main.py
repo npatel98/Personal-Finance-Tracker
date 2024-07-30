@@ -79,7 +79,7 @@ def main():
         elif choice == "2":
             start_date = get_date("Enter the start date (dd-mm-yyyy): ")
             end_date = get_date("Enter the end date (dd-mm-yyyy): ")
-            df = CSV.get_transaction(start_date, end_date)
+            df = CSV.get_transactions(start_date, end_date)
         elif choice == "3":
             print("Exiting...")
             break
